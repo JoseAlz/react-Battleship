@@ -15,9 +15,10 @@ const gameboard = () => {
 
   const ships = {
     //ship objects to be placed on board
-
+/*     s2a: ship(2, "s2a"),
+    s2b: ship(2, "s2b"), 
     s3a: ship(3, "s3a"),
-    s3b: ship(3, "s3b"),
+    s3b: ship(3, "s3b"), */
     s4: ship(4, "s4"),
     s5: ship(5, "s5"),
   };
