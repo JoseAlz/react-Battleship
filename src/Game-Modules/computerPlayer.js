@@ -288,6 +288,7 @@ const manageTargetStack = (game) => {
 };
 
 const computerPlayer = (game, mode) => {
+  
   difficulty = mode
   if (move && move.res === "SUNK") {
     console.log(game.getBoard());

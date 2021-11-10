@@ -2,6 +2,7 @@ import explosion from "../Assets/explosion.svg";
 import splash from "../Assets/splash.svg";
 
 const Cell = ({
+  color,
   item,
   row,
   col,
@@ -12,7 +13,6 @@ const Cell = ({
   handleChangeTurn,
   ships,
   mode,
-  root,
   setRoot,
   highlightRed,
   highlightGreen,
@@ -44,6 +44,7 @@ const Cell = ({
   if (item === 0) {
     return (
       <div
+        style={{ backgroundColor: color }}
         key={`${row - 1}, ${col - 1}}`}
         data-row={row - 1}
         data-col={col - 1}
@@ -62,6 +63,7 @@ const Cell = ({
   } else if (item === 1) {
     return (
       <div
+        style={{ backgroundColor: color }}
         data-row={row - 1}
         data-col={col - 1}
         className={`cell ${highlightClass}`}
@@ -74,7 +76,7 @@ const Cell = ({
       return ships === "show" ? (
         <div className={`cell ${highlightClass}`}>
           <div
-            style={{ width: "100%", height: "100%", zIndex: "10" }}
+            style={{ width: "100%", height: "100%", zIndex: "10", backgroundColor: color ==="white" ? "red": "" }}
             key={`${row}, ${col}}`}
             data-row={row - 1}
             data-col={col - 1}

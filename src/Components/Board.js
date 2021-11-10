@@ -1,17 +1,20 @@
 import Cell from "./Cell";
 
 const Board = ({game, board, setBoard, turn, handleChangeTurn}) => {
-    let row = 0;
+    let row = -1;
     return ( 
         <div className="board" style={{}}>
             {board.map((array) => {
-              let col = 0;
+              let col = -1;
               row++;
+              let remainder = row % 2
               return array.map((item) => {
                 col++;
+               
                 return (
                   <Cell
-                    key={`${row - 1}, ${col - 1}}`}
+                    color = {(col-remainder) %2===0 ? "white" : ""}
+                    key={`${row }, ${col }}`}
                     item={item}
                     row={row}
                     col={col}
