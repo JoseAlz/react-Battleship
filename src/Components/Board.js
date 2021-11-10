@@ -7,13 +7,13 @@ const Board = ({game, board, setBoard, turn, handleChangeTurn}) => {
             {board.map((array) => {
               let col = -1;
               row++;
-              let remainder = row % 2
+              let remainder = row % 3
               return array.map((item) => {
                 col++;
                
                 return (
                   <Cell
-                    color = {(col-remainder) %2===0 ? "white" : ""}
+                    color = {(col-remainder) %3===0 ? "white" : ""}
                     key={`${row }, ${col }}`}
                     item={item}
                     row={row}
